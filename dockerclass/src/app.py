@@ -14,9 +14,9 @@ def hello_world():
             database=os.environ.get("MYSQL_DATABASE", "appdb")
         )
         cursor = conn.cursor()
-        cursor.execute("SELECT 'Conexión exitosa a MySQL!'")
+        cursor.execute("SELECT 'Conexion exitosa a MySQL'")
         result = cursor.fetchone()
-        return f"Hola Mundo! {result[0]}"
+        return f"Hola Mundo {result[0]}"
     except Exception as e:
         return f"Error al conectar a MySQL: {str(e)}"
 
